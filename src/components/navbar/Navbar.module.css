@@ -1,0 +1,30 @@
+.navbar_wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  gap: 12px;
+  width: 100%;
+}
+
+.navbar_wrapper::after {
+  content: "";
+  border: 1px solid #fff;
+  width: 100%;
+  opacity: 0.1;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  display: flex;
+}
+
+.navbar_title {
+  font-size: 28px;
+  text-transform: lowercase;
+}
+
+.navbar_title_js {
+  color: #fed602;
+}
