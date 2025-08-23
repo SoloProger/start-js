@@ -7,33 +7,19 @@ import {
 } from "@mui/material";
 import { common } from "@mui/material/colors";
 import { FC } from "react";
-import { Control, Controller } from "react-hook-form";
+import { Controller } from "react-hook-form";
+import { RadioButtonControlProps } from "./types";
 
-interface RadioButton {
-  value: string;
-  label: string;
-}
-
-interface RadioButtonControllerProps {
-  control: Control<any>;
-  label: string;
-  labelColor: string;
-  radioColor: string;
-  radioButtons: RadioButton[];
-  defaultRadio: string;
-}
-
-const RadioButtonController: FC<RadioButtonControllerProps> = ({
+const RadioButtonControl: FC<RadioButtonControlProps> = ({
   control,
   label,
+  name,
   labelColor,
-  radioColor,
   radioButtons,
-  defaultRadio,
 }) => {
   return (
     <Controller
-      name="collector"
+      name={name}
       control={control}
       render={({ field }) => (
         <FormControl {...field}>
@@ -42,7 +28,7 @@ const RadioButtonController: FC<RadioButtonControllerProps> = ({
           </FormLabel>
           <RadioGroup
             aria-labelledby="collector-group"
-            defaultValue={defaultRadio}
+            defaultValue={radioButtons[0].value}
             name="collector-group"
             row
           >
@@ -55,7 +41,10 @@ const RadioButtonController: FC<RadioButtonControllerProps> = ({
                     sx={{
                       color: common.white,
                       "&.Mui-checked": {
-                        color: radioColor,
+                        color:
+                          radioButton.color.colorName[
+                            radioButton.color.colorNumber
+                          ],
                       },
                     }}
                   />
@@ -70,4 +59,4 @@ const RadioButtonController: FC<RadioButtonControllerProps> = ({
   );
 };
 
-export default RadioButtonController;
+export default RadioButtonControl;

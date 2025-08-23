@@ -1,21 +1,21 @@
 "use client";
 
+import { CommonForm } from "@/common/CommonForm";
 import { FieldValues, useForm } from "react-hook-form";
-import CommonForm from "../../../common/CommonForm/CommonForm";
 import { formConfig } from "./consts";
-import styles from "./FormJS.module.css";
+import styles from "./FormAngular.module.css";
 
-interface FormJS {
+interface FormAngular {
   collector: string;
   language: string;
   withEslint: boolean;
   withPrettier: boolean;
 }
 
-const FormJS = () => {
+const FormAngular = () => {
   const { control, handleSubmit } = useForm({
     defaultValues: {
-      language: {},
+      cli: {},
       collector: {},
       extra: {
         withEslint: false,
@@ -36,4 +36,4 @@ const FormJS = () => {
   );
 };
 
-export default FormJS;
+export default FormAngular;

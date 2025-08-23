@@ -36,30 +36,25 @@ const icons: Icon[] = [
     link: "/starter/react",
     color: "#80DEEA",
   },
-  { path: "/icons/nextjs.svg", title: "Next", link: "/starter/next" },
   {
     path: "/icons/vue.svg",
     title: "Vue",
     link: "/starter/vue",
     color: "#81C784",
   },
-  {
-    path: "/icons/nuxtjs.svg",
-    title: "Nuxt",
-    link: "/starter/nuxt",
-    color: "#1DE9B6",
-  },
-  {
-    path: "/icons/nestjs.svg",
-    title: "Nest",
-    link: "/starter/nest",
-    color: "#F50157",
-  },
-  {
-    path: "/icons/expressjs.svg",
-    title: "Express",
-    link: "/starter/express",
-  },
+  // { path: "/icons/nextjs.svg", title: "Next", link: "/starter/next" },
+  // {
+  //   path: "/icons/nuxtjs.svg",
+  //   title: "Nuxt",
+  //   link: "/starter/nuxt",
+  //   color: "#1DE9B6",
+  // },
+  // {
+  //   path: "/icons/nestjs.svg",
+  //   title: "Nest",
+  //   link: "/starter/nest",
+  //   color: "#F50157",
+  // },
 ];
 
 const Sidebar = () => {

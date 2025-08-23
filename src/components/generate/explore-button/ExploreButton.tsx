@@ -11,7 +11,7 @@ const ExploreButton = ({ formParams }: ExploreButtonProps) => {
 
   return (
     <button className={styles.button} onClick={onGenerate}>
-      Сгенерировать
+      Просмотреть
     </button>
   );
 };

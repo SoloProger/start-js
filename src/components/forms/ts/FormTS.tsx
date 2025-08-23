@@ -1,18 +1,18 @@
 "use client";
 
+import { CommonForm } from "@/common/CommonForm";
 import { FieldValues, useForm } from "react-hook-form";
-import CommonForm from "../../../common/CommonForm/CommonForm";
 import { formConfig } from "./consts";
-import styles from "./FormJS.module.css";
+import styles from "./FormTS.module.css";
 
-interface FormJS {
+interface FormTS {
   collector: string;
   language: string;
   withEslint: boolean;
   withPrettier: boolean;
 }
 
-const FormJS = () => {
+const FormTS = () => {
   const { control, handleSubmit } = useForm({
     defaultValues: {
       language: {},
@@ -36,4 +36,4 @@ const FormJS = () => {
   );
 };
 
-export default FormJS;
+export default FormTS;

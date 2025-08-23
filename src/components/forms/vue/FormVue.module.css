@@ -1,0 +1,12 @@
+.form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  align-items: center;
+  gap: 50px;
+  width: 80%;
+}
+
+.form_color {
+  color: #66bb6a !important;
+}
